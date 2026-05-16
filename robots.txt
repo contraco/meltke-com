@@ -6,7 +6,20 @@ Allow: /
 Disallow: /.git/
 Disallow: /admin/
 
-# Block AI training crawlers
+# AI answer engines — ALLOWED (surface content in AI-generated answers)
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+# AI training scrapers — BLOCKED (do not use content for model training)
 User-agent: GPTBot
 Disallow: /
 
@@ -16,13 +29,7 @@ Disallow: /
 User-agent: CCBot
 Disallow: /
 
-User-agent: anthropic-ai
-Disallow: /
-
 User-agent: Claude-Web
-Disallow: /
-
-User-agent: PerplexityBot
 Disallow: /
 
 User-agent: Bytespider
