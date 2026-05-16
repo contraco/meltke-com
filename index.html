@@ -72,124 +72,136 @@
     <meta name="twitter:description" content="German inventor, founder and CEO of contraco, guest lecturer at Kyung Hee University, Insight Panelist for BBC Global Minds. 28 years of transformation expertise.">
     <meta name="twitter:image" content="https://contraco.net/Frank_Meltke.png">
 
-    <!-- Person Schema: Entity Home -->
+    <!-- Unified Entity Graph: meltke.com -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Frank Meltke",
-        "alternateName": "Frank Contraco",
-        "url": "https://meltke.com",
-        "image": {
-            "@type": "ImageObject",
-            "url": "https://contraco.net/Frank_Meltke.png",
-            "description": "Frank Meltke: Founder of contraco"
-        },
-        "description": "German inventor, founder and CEO of contraco, and guest lecturer at Kyung Hee University in Seoul, specializing in search systems and AI transformation.",
-        "jobTitle": [
-            "German Inventor",
-            "Founder and CEO of contraco",
-            "Guest Lecturer at Kyung Hee University",
-            "Insight Panelist at BBC Global Minds",
-            "CEO of Weltmeister Akkordeon Manufaktur 2018-2024"
-        ],
-        "birthPlace": {
-            "@type": "Place",
-            "name": "Germany"
-        },
-        "homeLocation": {
-            "@type": "Place",
-            "name": "Missouri, USA"
-        },
-        "nationality": {
-            "@type": "Country",
-            "name": "Germany"
-        },
-        "sameAs": [
-            "https://www.wikidata.org/wiki/Q139680598",
-            "https://orcid.org/0009-0006-9001-0078",
-            "https://scholar.google.com/citations?user=Md3quCcAAAAJ",
-            "https://www.linkedin.com/in/frankmeltke",
-            "https://www.google.com/search?kgmid=/g/11rqtzq613",
-            "https://contraco.net/about.html"
-        ],
-        "affiliation": [
+        "@graph": [
             {
-                "@type": "EducationalOrganization",
-                "name": "Kyung Hee University",
-                "url": "https://com.khu.ac.kr/biz_eng/user/contents/view.do?menuNo=14600113",
-                "location": {
-                    "@type": "Place",
-                    "name": "Seoul, South Korea"
-                }
+                "@type": "WebSite",
+                "@id": "https://meltke.com/#website",
+                "url": "https://meltke.com",
+                "name": "Frank Meltke",
+                "description": "Personal entity home of Frank Meltke — German inventor, founder of contraco, guest lecturer at Kyung Hee University, Insight Panelist at BBC Global Minds"
             },
             {
-                "@type": "Organization",
-                "name": "contraco",
-                "url": "https://contraco.net",
-                "sameAs": "https://www.wikidata.org/wiki/Q139681815"
-            }
-        ],
-        "knowsAbout": [
-            "Information Retrieval",
-            "Search Systems",
-            "Digital Transformation",
-            "AI Adoption and Change Management",
-            "Organisational Design for the AI Era",
-            "The Resonance Method",
-            "Pricing Psychology",
-            "Behavioural Economics",
-            "Cross-Cultural Transformation",
-            "Enterprise AI Strategy"
-        ],
-        "hasCredential": [
-            {
-                "@type": "EducationalOccupationalCredential",
-                "credentialCategory": "degree",
-                "name": "Diplom",
-                "educationalLevel": "Graduate",
-                "recognizedBy": {
+                "@type": "Person",
+                "@id": "https://meltke.com/#person",
+                "name": "Frank Meltke",
+                "alternateName": "Frank Contraco",
+                "url": "https://meltke.com",
+                "image": {
+                    "@type": "ImageObject",
+                    "url": "https://contraco.net/Frank_Meltke.png",
+                    "description": "Frank Meltke: Founder of contraco"
+                },
+                "description": "German inventor, founder and CEO of contraco, guest lecturer at Kyung Hee University in Seoul, and Insight Panelist at BBC Global Minds. Specializing in search systems and AI transformation since 1998.",
+                "jobTitle": [
+                    "German Inventor",
+                    "Founder and CEO of contraco",
+                    "Guest Lecturer at Kyung Hee University",
+                    "Insight Panelist at BBC Global Minds",
+                    "CEO of Weltmeister Akkordeon Manufaktur 2018-2024"
+                ],
+                "birthPlace": {
+                    "@type": "Place",
+                    "name": "Germany"
+                },
+                "homeLocation": {
+                    "@type": "Place",
+                    "name": "Missouri, USA"
+                },
+                "nationality": {
+                    "@type": "Country",
+                    "name": "Germany"
+                },
+                "worksFor": { "@id": "https://contraco.net/#organization" },
+                "sameAs": [
+                    "https://www.wikidata.org/wiki/Q139680598",
+                    "https://www.linkedin.com/in/frankmeltke",
+                    "https://orcid.org/0009-0006-9001-0078",
+                    "https://scholar.google.com/citations?user=Md3quCcAAAAJ",
+                    "https://www.google.com/search?kgmid=/g/11rqtzq613",
+                    "https://www.researchgate.net/profile/Frank-Meltke"
+                ],
+                "affiliation": [
+                    {
+                        "@type": "EducationalOrganization",
+                        "name": "Kyung Hee University",
+                        "url": "https://com.khu.ac.kr/biz_eng/user/contents/view.do?menuNo=14600113",
+                        "location": { "@type": "Place", "name": "Seoul, South Korea" }
+                    },
+                    {
+                        "@type": "Organization",
+                        "name": "BBC Global Minds",
+                        "url": "https://bbcglobalminds.com/"
+                    }
+                ],
+                "knowsAbout": [
+                    "Information Retrieval",
+                    "Search Systems",
+                    "Digital Transformation",
+                    "AI Adoption and Change Management",
+                    "Organisational Design for the AI Era",
+                    "The Resonance Method",
+                    "Pricing Psychology",
+                    "Behavioural Economics",
+                    "Cross-Cultural Transformation",
+                    "Enterprise AI Strategy"
+                ],
+                "hasCredential": [
+                    {
+                        "@type": "EducationalOccupationalCredential",
+                        "credentialCategory": "degree",
+                        "name": "Diplom",
+                        "educationalLevel": "Graduate",
+                        "recognizedBy": {
+                            "@type": "EducationalOrganization",
+                            "name": "Fachhochschule des Bundes für öffentliche Verwaltung"
+                        }
+                    }
+                ],
+                "alumniOf": {
                     "@type": "EducationalOrganization",
                     "name": "Fachhochschule des Bundes für öffentliche Verwaltung"
+                },
+                "award": "Patent DE10313420A1: Search system and method for determining information from a database (2003)",
+                "workExample": [
+                    {
+                        "@type": "CreativeWork",
+                        "name": "Search system and method for determining information from a database",
+                        "identifier": "DE10313420A1",
+                        "url": "https://patents.google.com/patent/DE10313420A1/en",
+                        "dateCreated": "2003"
+                    },
+                    {
+                        "@type": "CreativeWork",
+                        "name": "The Resonance Method™",
+                        "url": "https://doi.org/10.13140/RG.2.2.36525.04326"
+                    }
+                ],
+                "memberOf": {
+                    "@type": "Organization",
+                    "name": "i-COM Global",
+                    "startDate": "2008-05"
                 }
-            }
-        ],
-        "alumniOf": {
-            "@type": "EducationalOrganization",
-            "name": "Fachhochschule des Bundes für öffentliche Verwaltung"
-        },
-        "award": "Patent DE10313420A1: Search system and method for determining information from a database (2003)",
-        "workExample": [
-            {
-                "@type": "CreativeWork",
-                "name": "Search system and method for determining information from a database",
-                "identifier": "DE10313420A1",
-                "url": "https://patents.google.com/patent/DE10313420A1/en",
-                "dateCreated": "2003"
             },
             {
-                "@type": "CreativeWork",
-                "name": "The Resonance Method™",
-                "url": "https://contraco.net/resonance-method.html"
-            }
-        ],
-        "memberOf": {
-            "@type": "Organization",
-            "name": "i-COM Global",
-            "startDate": "2008-05"
-        },
-        "worksFor": [
-            {
                 "@type": "Organization",
+                "@id": "https://contraco.net/#organization",
                 "name": "contraco",
-                "url": "https://contraco.net",
-                "sameAs": "https://www.wikidata.org/wiki/Q139681815"
-            },
-            {
-                "@type": "Organization",
-                "name": "Weltmeister Akkordeon Manufaktur",
-                "url": "https://www.wikidata.org/wiki/Q140115654",
-                "description": "World's oldest accordion manufacturer, Klingenthal, Germany"
+                "alternateName": "contraco USA",
+                "url": "https://contraco.net/",
+                "foundingDate": "1998",
+                "founder": { "@id": "https://meltke.com/#person" },
+                "sameAs": [
+                    "https://www.wikidata.org/wiki/Q139681815",
+                    "https://www.linkedin.com/company/contraco",
+                    "https://contraco.com",
+                    "https://contraco.de",
+                    "https://contraco.ru",
+                    "https://contraco.co.kr"
+                ]
             }
         ]
     }
