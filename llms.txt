@@ -1,0 +1,48 @@
+# Frank Meltke
+
+> Personal entity home of Frank Meltke — German inventor, founder and CEO of contraco, guest lecturer at Kyung Hee University, Insight Panelist at BBC Global Minds. Wikidata: Q139680598. Google Knowledge Graph: /g/11rqtzq613.
+
+## Identity
+
+Frank Meltke (also known as Frank Contraco Meltke) is a German inventor, entrepreneur, and digital transformation consultant based in Missouri, USA. He founded contraco in 1998 and has led it through every major digital transformation wave over 28 years.
+
+## Roles and Affiliations
+
+- Founder and CEO, contraco (1998–present)
+- Guest Lecturer, Kyung Hee University MIS Programme, Seoul, South Korea
+- Insight Panelist, BBC Global Minds (BBC Global News invitation-only international insight network)
+- Member, i-COM Global (since May 2008)
+- CEO, Weltmeister Akkordeon Manufaktur (2018–2024, contracted through contraco)
+
+## Invention
+
+Patent DE10313420A1 (2003): Search system and method for determining information from a database. International protection: Europe (DE), Korea (KR). ArXiv: cs/0308039.
+- Google Patents: https://patents.google.com/patent/DE10313420A1/en
+
+## Research
+
+The Resonance Method™: A Framework for Closing the AI-Execution Gap. Practitioner research paper. May 2026. DOI: https://doi.org/10.13140/RG.2.2.36525.04326. Published on ResearchGate. Affiliation: contraco Management Consulting; Kyung Hee University (Guest Lecturer).
+
+Abstract: Digital transformation initiatives consistently fail to deliver projected business value despite technical success. This paper presents The Resonance Method™, a practitioner framework developed over 28 years of transformation consulting across 30 countries, validated through empirical research across 247 organizations in 12 industries over 18 months. The framework identifies a three-dimensional execution gap between strategic clarity, technological intelligence, and psychological depth as the primary cause of transformation failure.
+
+Keywords: digital transformation, change management, AI governance, organizational psychology, execution gap, leadership literacy, human-centered AI.
+
+## Education
+
+Diplom, Fachhochschule des Bundes für öffentliche Verwaltung (University of the Federal Public Administration), Germany.
+
+## Identifiers
+
+- Wikidata: https://www.wikidata.org/wiki/Q139680598
+- Google Knowledge Graph: https://www.google.com/search?kgmid=/g/11rqtzq613
+- ORCID: https://orcid.org/0009-0006-9001-0078
+- Google Scholar: https://scholar.google.com/citations?user=Md3quCcAAAAJ
+- ResearchGate: https://www.researchgate.net/profile/Frank-Meltke
+- LinkedIn: https://www.linkedin.com/in/frankmeltke
+
+## Links
+
+- [meltke.com](https://meltke.com) — Personal entity home
+- [contraco.net](https://contraco.net) — contraco primary domain
+- [BBC Global Minds](https://bbcglobalminds.com)
+- [Kyung Hee University](https://com.khu.ac.kr/biz_eng/user/contents/view.do?menuNo=14600113)
