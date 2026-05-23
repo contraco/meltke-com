@@ -63,6 +63,7 @@
     <meta property="og:description" content="German inventor, founder and CEO of contraco, guest lecturer at Kyung Hee University in Seoul, and Insight Panelist for BBC Global Minds. Pioneer in search systems and AI transformation since 1998.">
     <meta property="og:url" content="https://meltke.com/">
     <meta property="og:image" content="https://contraco.net/Frank_Meltke.png">
+    <meta property="og:logo" content="https://meltke.com/Logo_rectangle.svg">
     <meta property="og:locale" content="en_US">
     <meta property="profile:first_name" content="Frank">
     <meta property="profile:last_name" content="Meltke">
@@ -570,7 +571,7 @@
     <!-- Header -->
     <header>
         <a href="https://meltke.com/" class="logo-link" id="site-logo">
-            <img src="https://contraco.net/Logo_rectangle.svg"
+            <img src="https://meltke.com/Logo_rectangle.svg"
                  alt="contraco company logo - Digital Transformation Consulting"
                  onerror="this.parentElement.classList.add('logo-failed');">
             <span class="logo-fallback">contraco</span>
@@ -800,7 +801,7 @@
             function handleLogoError() {
                 if (retryCount < maxRetries) {
                     retryCount++;
-                    setTimeout(() => { logoImg.src = 'https://contraco.net/Logo_rectangle.svg'; }, 1000 * retryCount);
+                    setTimeout(() => { logoImg.src = 'https://meltke.com/Logo_rectangle.svg'; }, 1000 * retryCount);
                 } else {
                     logo.classList.add('logo-failed');
                 }
