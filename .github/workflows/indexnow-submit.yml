@@ -13,10 +13,12 @@ permissions:
 
 env:
   DOMAIN: https://meltke.com
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: 'true'
 
 jobs:
   submit-and-update-sitemap:
     runs-on: ubuntu-latest
+    timeout-minutes: 10
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -67,9 +69,6 @@ jobs:
             echo "No HTML/HTM changes detected."
             echo "found_files=false" >> "$GITHUB_OUTPUT"
           fi
-
-      - name: Install dependencies
-        run: sudo apt-get update && sudo apt-get install -y jq xmlstarlet
 
       - name: Generate smart sitemap.xml
         shell: bash
