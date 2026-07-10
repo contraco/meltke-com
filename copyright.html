@@ -112,40 +112,14 @@
             background: var(--warm-white);
         }
 
-        .logo-link {
-            display: flex;
-            align-items: center;
-            gap: 14px;
-            text-decoration: none;
-        }
-
-        .logo-link img {
-            height: 36px;
-            width: auto;
-        }
-
-        .logo-link.logo-failed img { display: none; }
-        .logo-fallback {
-            display: none;
+        .logo-wordmark {
             font-family: var(--font-serif);
             font-size: 1.4rem;
             font-weight: 600;
             color: var(--primary-red);
             letter-spacing: 0.04em;
-        }
-        .logo-link.logo-failed .logo-fallback { display: block; }
-
-        .header-link {
-            font-family: var(--font-sans);
-            font-size: 0.85rem;
-            font-weight: 500;
-            color: var(--warm-gray-medium);
             text-decoration: none;
-            letter-spacing: 0.06em;
-            text-transform: uppercase;
-            transition: color 0.2s;
         }
-        .header-link:hover { color: var(--primary-red); }
 
         main { flex: 1; }
 
@@ -236,13 +210,7 @@
 
     <!-- Header -->
     <header>
-        <a href="https://meltke.com/" class="logo-link" id="site-logo">
-            <img src="https://meltke.com/Logo_rectangle.svg"
-                 alt="contraco company logo - Digital Transformation Consulting"
-                 onerror="this.parentElement.classList.add('logo-failed');">
-            <span class="logo-fallback">contraco</span>
-        </a>
-        <a href="https://contraco.net/" class="header-link">contraco.net →</a>
+        <a href="https://meltke.com/" class="logo-wordmark">Frank Meltke</a>
     </header>
 
     <main>
@@ -256,30 +224,9 @@
 
     <!-- Footer -->
     <footer>
-        <p class="footer-copy">© 2026 Frank Meltke. All rights reserved. · <a href="https://meltke.com/copyright.html" style="color:inherit;">Copyright</a></p>
+        <p class="footer-copy">© 2026 Frank Meltke. All rights reserved.</p>
         <p class="footer-contraco">Founder &amp; CEO at <a href="https://contraco.net/">contraco</a> · Insight Panelist at <a href="https://bbcglobalminds.com/" target="_blank" rel="noopener">BBC Global Minds</a> · <a href="https://doi.org/10.13140/RG.2.2.36525.04326" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">Resonance Method™</a> is a trademark of contraco.</p>
     </footer>
-
-    <!-- Logo fallback -->
-    <script>
-        (function() {
-            const logo = document.getElementById('site-logo');
-            const logoImg = logo.querySelector('img');
-            let retryCount = 0;
-            const maxRetries = 2;
-            function handleLogoError() {
-                if (retryCount < maxRetries) {
-                    retryCount++;
-                    setTimeout(() => { logoImg.src = 'https://meltke.com/Logo_rectangle.svg'; }, 1000 * retryCount);
-                } else {
-                    logo.classList.add('logo-failed');
-                }
-            }
-            if (logoImg.complete && logoImg.naturalHeight === 0) { handleLogoError(); }
-            logoImg.addEventListener('error', handleLogoError);
-            logoImg.addEventListener('load', function() { logo.classList.remove('logo-failed'); });
-        })();
-    </script>
 
     <!-- Goatcounter -->
     <script>
