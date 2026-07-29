@@ -307,14 +307,41 @@
             background: var(--warm-white);
         }
 
-        .logo-wordmark {
+        .logo-link {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            text-decoration: none;
+        }
+
+        .logo-link img {
+            height: 36px;
+            width: auto;
+        }
+
+        /* Logo fallback */
+        .logo-link.logo-failed img { display: none; }
+        .logo-fallback {
+            display: none;
             font-family: var(--font-serif);
             font-size: 1.4rem;
             font-weight: 600;
             color: var(--primary-red);
             letter-spacing: 0.04em;
-            text-decoration: none;
         }
+        .logo-link.logo-failed .logo-fallback { display: block; }
+
+        .header-link {
+            font-family: var(--font-sans);
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: var(--warm-gray-medium);
+            text-decoration: none;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            transition: color 0.2s;
+        }
+        .header-link:hover { color: var(--primary-red); }
 
         /* ── Main ── */
         main { flex: 1; }
@@ -587,7 +614,7 @@
         "@type": "WebPage",
         "url": "https://meltke.com/",
         "name": "Frank Meltke | Inventor, Founder of contraco",
-        "dateModified": "2026-07-10",
+        "dateModified": "2026-07-29",
         "isPartOf": { "@id": "https://meltke.com/" }
     }
     </script>
@@ -596,7 +623,13 @@
 
     <!-- Header -->
     <header>
-        <a href="https://meltke.com/" class="logo-wordmark">Frank Meltke</a>
+        <a href="https://meltke.com/" class="logo-link" id="site-logo">
+            <img src="https://meltke.com/Logo_rectangle.svg"
+                 alt="contraco company logo - Digital Transformation Consulting"
+                 onerror="this.parentElement.classList.add('logo-failed');">
+            <span class="logo-fallback">contraco</span>
+        </a>
+        <a href="https://contraco.net/" class="header-link">contraco.net →</a>
     </header>
 
     <main>
@@ -629,6 +662,18 @@
 
         <div class="divider"></div>
 
+        <!-- Origin -->
+        <section class="section">
+            <p class="section-label">Origin</p>
+            <h2>Why I Founded contraco in 1998</h2>
+            <p>In 1998, the internet was not yet a business tool. It was a signal. And the signal was unmistakable: the organizations that would survive the next twenty years would not be the ones with the fastest servers or the biggest IT budgets. They would be the ones that understood what was actually changing: not the technology, but the human relationship to information.</p>
+            <p>In 1998 I founded contraco, a premium transformation consultancy that combines strategic clarity, technological intelligence, and psychological depth. The firm has served 50+ global brands across 30 countries on four continents, including Microsoft, Deutsche Telekom, Thomas Cook, KPMG, and SK Telecom. The proprietary methodology, <a href="https://contraco.net/resonance-method.html" style="color:var(--primary-red);text-decoration:none;font-weight:500;">The Resonance Method™</a>, represents the evolution from traditional consulting toward comprehensive human-centred change.</p>
+            <p>I founded contraco that year because I saw a gap no one was naming. Companies were implementing digital systems at enormous cost and watching them fail quietly, not because the technology was wrong, but because the people inside the organization had never been part of the decision. Transformation was being done to organizations, not with them.</p>
+            <p>I had come from a public administration background in Germany, where I had seen firsthand how structural rigidity and human resistance could neutralize even the most well-funded initiatives. That experience shaped everything that followed. contraco was never meant to be a technology consultancy. It was built to work at the level where digital transformation actually succeeds or fails: the intersection of organizational design, human psychology, and strategic clarity.</p>
+            <p>Twenty-eight years later, the fundamental problem has not changed. The technology has. AI has replaced the search engine as the defining disruption of the era. But the failure mode is identical: organizations racing to implement without first understanding the human architecture they are building on top of.</p>
+            <p>That is still why contraco exists.</p>
+        </section>
+
         <!-- Invention -->
         <section class="section">
             <p class="section-label">Invention</p>
@@ -645,6 +690,7 @@
                 <p>International protection: Europe (DE) · Korea (KR) · arXiv: cs/0308039</p>
                 <a href="https://patents.google.com/patent/DE10313420A1/en" target="_blank" rel="noopener">View on Google Patents →</a>
             </div>
+            <p>Information retrieval is not a technical problem. It is a structural one, shaped by the architecture of the system and the behavior of the people using it. That insight became the foundation for every piece of work contraco has done since. The tools change. The underlying problem does not.</p>
         </section>
 
         <!-- Academic -->
@@ -669,18 +715,6 @@
                     <p>Fachhochschule des Bundes für öffentliche Verwaltung</p>
                 </div>
             </div>
-        </section>
-
-        <!-- BBC Global Minds -->
-        <section class="section">
-            <p class="section-label">Global Insight</p>
-            <h2>BBC Global Minds</h2>
-            <p>
-                I am a member of <a href="https://bbcglobalminds.com/" target="_blank" rel="noopener" style="color:var(--primary-red);text-decoration:none;font-weight:500;">BBC Global Minds</a>, the BBC's invitation-only international insight network operated by BBC Global News. As an Insight Panelist, I provide strategic feedback, track macro trends, and evaluate global media framing for international audiences.
-            </p>
-            <p>
-                This role complements the Kyung Hee University connection in forming a consistent macro-intelligence perspective grounded in 28 years of frontline transformation work across four continents.
-            </p>
         </section>
 
         <!-- Weltmeister -->
@@ -716,18 +750,6 @@
             </div>
         </section>
 
-        <!-- contraco -->
-        <section class="section">
-            <p class="section-label">Organisation</p>
-            <h2><a href="https://contraco.net/" style="color:var(--primary-red);text-decoration:none;">contraco</a></h2>
-            <p>
-                In 1998 I founded contraco, a premium transformation consultancy that combines strategic clarity, technological intelligence, and psychological depth. The firm has served 50+ global brands across 30 countries on four continents, including Microsoft, Deutsche Telekom, Thomas Cook, KPMG, and SK Telecom.
-            </p>
-            <p>
-                The proprietary methodology, <a href="https://contraco.net/resonance-method.html" style="color:var(--primary-red);text-decoration:none;font-weight:500;">The Resonance Method™</a>, represents the evolution from traditional consulting toward comprehensive human-centred change.
-            </p>
-        </section>
-
         <!-- Resonance Method -->
         <section class="section">
             <p class="section-label">Research</p>
@@ -748,6 +770,34 @@
                 <p style="margin-top:8px;font-size:0.85rem;color:var(--warm-gray-medium);">Keywords: digital transformation, change management, AI governance, organizational psychology, execution gap, leadership literacy, human-centered AI</p>
                 <a href="https://doi.org/10.13140/RG.2.2.36525.04326" target="_blank" rel="noopener">Read on ResearchGate →</a>
             </div>
+        </section>
+
+        <!-- Agentic Commerce -->
+        <section class="section">
+            <p class="section-label">Current Research</p>
+            <h2>What Comes After the Checkout</h2>
+            <p>The pattern I identified in 2003 has reached its logical conclusion. Autonomous AI agents are now executing enterprise transactions directly at the API layer, bypassing the checkout entirely. The human is no longer the last step in the purchase decision. The system is.</p>
+            <p>This shift is the subject of ongoing research and practical framework development at <a href="https://agentic.contraco.net/" rel="noopener" style="color: var(--primary-red);">agentic.contraco.net</a>, where contraco is building the diagnostic and strategic tools enterprises need to remain visible in an economy where AI agents are the buyers.</p>
+        </section>
+
+        <!-- BBC Global Minds -->
+        <section class="section">
+            <p class="section-label">Global Insight</p>
+            <h2>BBC Global Minds</h2>
+            <p>
+                I am a member of <a href="https://bbcglobalminds.com/" target="_blank" rel="noopener" style="color:var(--primary-red);text-decoration:none;font-weight:500;">BBC Global Minds</a>, the BBC's invitation-only international insight network operated by BBC Global News. As an Insight Panelist, I provide strategic feedback, track macro trends, and evaluate global media framing for international audiences.
+            </p>
+            <p>
+                This role complements the Kyung Hee University connection in forming a consistent macro-intelligence perspective grounded in 28 years of frontline transformation work across four continents.
+            </p>
+        </section>
+
+        <!-- Signal -->
+        <section class="section">
+            <p class="section-label">Practitioner Notes</p>
+            <h2>Signal</h2>
+            <p>Alongside the consulting work, I publish practitioner notes on AI governance, agent authorization architecture, and engineering judgment. These are field observations written while actively building the systems they describe, not commentary from the sideline.</p>
+            <p>The notes are published at <a href="https://signal.meltke.com/" rel="noopener" style="color: var(--primary-red); font-weight: 500;">signal.meltke.com</a>.</p>
         </section>
 
         <!-- Profiles -->
@@ -803,43 +853,6 @@
             </div>
         </section>
 
-        <!-- Why I Founded contraco -->
-        <section class="section">
-            <p class="section-label">Origin</p>
-            <h2>Why I Founded contraco in 1998</h2>
-            <p>In 1998, the internet was not yet a business tool. It was a signal. And the signal was unmistakable: the organizations that would survive the next twenty years would not be the ones with the fastest servers or the biggest IT budgets. They would be the ones that understood what was actually changing: not the technology, but the human relationship to information.</p>
-            <p>I founded contraco that year because I saw a gap no one was naming. Companies were implementing digital systems at enormous cost and watching them fail quietly, not because the technology was wrong, but because the people inside the organization had never been part of the decision. Transformation was being done to organizations, not with them.</p>
-            <p>I had come from a public administration background in Germany, where I had seen firsthand how structural rigidity and human resistance could neutralize even the most well-funded initiatives. That experience shaped everything that followed. contraco was never meant to be a technology consultancy. It was built to work at the level where digital transformation actually succeeds or fails: the intersection of organizational design, human psychology, and strategic clarity.</p>
-            <p>Twenty-eight years later, the fundamental problem has not changed. The technology has. AI has replaced the search engine as the defining disruption of the era. But the failure mode is identical: organizations racing to implement without first understanding the human architecture they are building on top of.</p>
-            <p>That is still why contraco exists.</p>
-        </section>
-
-        <!-- Patent Commentary -->
-        <section class="section">
-            <p class="section-label">Personal Note</p>
-            <h2>Patent DE10313420A1: a personal note</h2>
-            <p>In 2003, I filed a patent for a search relevance system. Google was barely five years old. Most people inside organizations still used web directories or relied on their IT department to find information. The idea that a search engine would become the primary interface between a person and human knowledge was not yet obvious. Except that it was.</p>
-            <p>Patent DE10313420A1 describes a method for combining the results of multiple search engines, weighting them by relevance signals, and surfacing prioritized results from a single query. The problem I was solving was not a technical one. It was a human one. Information was everywhere. Useful information was buried. The gap between what existed and what people could find was already creating decisions based on incomplete data, and I believed that gap would only grow.</p>
-            <p>The patent received international designations for Europe and Korea. At the time, that felt ambitious. In retrospect, it reflected something I understood intuitively but could not yet fully articulate: information retrieval is not a technical problem. It is a structural one, shaped by the architecture of the system and the behavior of the people using it.</p>
-            <p>That insight became the foundation for every piece of work contraco has done since. The tools change. The underlying problem does not.</p>
-        </section>
-
-        <!-- Agentic Commerce -->
-        <section class="section">
-            <p class="section-label">Current Research</p>
-            <h2>What Comes After the Checkout</h2>
-            <p>The pattern I identified in 2003 has reached its logical conclusion. Autonomous AI agents are now executing enterprise transactions directly at the API layer, bypassing the checkout entirely. The human is no longer the last step in the purchase decision. The system is.</p>
-            <p>This shift is the subject of ongoing research and practical framework development at <a href="https://agentic.contraco.net/" rel="noopener" style="color: var(--primary-red);">agentic.contraco.net</a>, where contraco is building the diagnostic and strategic tools enterprises need to remain visible in an economy where AI agents are the buyers.</p>
-        </section>
-
-        <!-- Signal -->
-        <section class="section">
-            <p class="section-label">Practitioner Notes</p>
-            <h2>Signal</h2>
-            <p>Alongside the consulting work, I publish practitioner notes on AI governance, agent authorization architecture, and engineering judgment. These are field observations written while actively building the systems they describe, not commentary from the sideline.</p>
-            <p>The notes are published at <a href="https://signal.meltke.com/" rel="noopener" style="color: var(--primary-red); font-weight: 500;">signal.meltke.com</a>.</p>
-        </section>
-
     </main>
 
     <!-- Footer -->
@@ -847,6 +860,27 @@
         <p class="footer-copy">© 2026 Frank Meltke. All rights reserved. · <a href="https://meltke.com/copyright.html" style="color:inherit;">Copyright</a></p>
         <p class="footer-contraco">Founder & CEO at <a href="https://contraco.net/">contraco</a> · Insight Panelist at <a href="https://bbcglobalminds.com/" target="_blank" rel="noopener">BBC Global Minds</a> · <a href="https://doi.org/10.13140/RG.2.2.36525.04326" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">Resonance Method™</a> is a trademark of contraco.</p>
     </footer>
+
+    <!-- Logo fallback -->
+    <script>
+        (function() {
+            const logo = document.getElementById('site-logo');
+            const logoImg = logo.querySelector('img');
+            let retryCount = 0;
+            const maxRetries = 2;
+            function handleLogoError() {
+                if (retryCount < maxRetries) {
+                    retryCount++;
+                    setTimeout(() => { logoImg.src = 'https://meltke.com/Logo_rectangle.svg'; }, 1000 * retryCount);
+                } else {
+                    logo.classList.add('logo-failed');
+                }
+            }
+            if (logoImg.complete && logoImg.naturalHeight === 0) { handleLogoError(); }
+            logoImg.addEventListener('error', handleLogoError);
+            logoImg.addEventListener('load', function() { logo.classList.remove('logo-failed'); });
+        })();
+    </script>
 
     <!-- Goatcounter -->
     <script>
