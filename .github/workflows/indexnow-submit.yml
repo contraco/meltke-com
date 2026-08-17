@@ -23,7 +23,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
         with:
-          fetch-depth: 2
+          fetch-depth: 0
           persist-credentials: false
 
       - name: Get changed HTML files (paths -> normalized URLs)
@@ -116,7 +116,8 @@ jobs:
             -not -name "*template*.html" \
           | sort | while read -r file; do
               url="$(normalize "$file")"
-              lastmod="$(date -r "$file" +"%Y-%m-%d" 2>/dev/null || stat -c %y "$file" | cut -d' ' -f1)"
+              lastmod="$(git log -1 --format="%ci" -- "$file" 2>/dev/null | cut -d' ' -f1)"
+              lastmod="${lastmod:-$(date +"%Y-%m-%d")}"
               seo_params="$(get_seo_params "$url" "$file")"
               priority="${seo_params%|*}"
               changefreq="${seo_params#*|}"
