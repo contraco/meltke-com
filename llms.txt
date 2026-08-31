@@ -27,3 +27,8 @@ Frank Meltke founded contraco in 1998. He holds patent DE10313420A1 (2003) for a
 ## About contraco
 
 contraco is a premium transformation consultancy founded in 1998. It combines strategic clarity, technological intelligence, and psychological depth. The proprietary methodology is The Resonance Method. contraco domains: contraco.net (English), contraco.de (German), contraco.ru (Russian), contraco.co.kr (Korean).
+
+## Pages
+
+<!-- AUTO-PAGES:START -->
+<!-- AUTO-PAGES:END -->
