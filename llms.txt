@@ -31,4 +31,6 @@ contraco is a premium transformation consultancy founded in 1998. It combines st
 ## Pages
 
 <!-- AUTO-PAGES:START -->
+- [Copyright](https://meltke.com/copyright.html)
+- [Frank Meltke | Inventor, Founder of contraco](https://meltke.com/)
 <!-- AUTO-PAGES:END -->
